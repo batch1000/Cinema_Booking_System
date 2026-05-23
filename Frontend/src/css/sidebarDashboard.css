@@ -1,0 +1,93 @@
+/* ===== SIDEBAR ===== */
+.dashboard-sidebar {
+    min-height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #f0f0f0;
+    padding: 0;
+    width: 220px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Logo */
+.dashboard-sidebar__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 24px 20px 5px 20px;
+}
+
+.dashboard-sidebar__logo-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #7b6fe0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border-radius: 50%;
+}
+
+.dashboard-sidebar__logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #1a1a2e;
+}
+
+/* Section */
+.dashboard-sidebar__section {
+    margin-top: 24px;
+    padding: 0 12px;
+}
+
+.dashboard-sidebar__section-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #b0b4c1;
+    letter-spacing: 0.1em;
+    padding: 0 10px;
+    margin-bottom: 6px;
+}
+
+/* Item */
+.dashboard-sidebar__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 9px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #6b7280;
+    font-size: 1.35rem;
+    transition: background 0.15s, color 0.15s;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.dashboard-sidebar__item:hover {
+    background-color: #f5f8ff;
+    color: #3b4a6b;
+}
+
+.dashboard-sidebar__item--active {
+    background-color: #eef2ff;
+    color: #4f6ef7;
+}
+
+.dashboard-sidebar__item-icon {
+    width: 20px;
+    text-align: center;
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+.dashboard-sidebar__item-text {
+    font-size: 1.6rem;
+}
+
+.dashboard-content {
+    background-color: #fafbfc;
+}

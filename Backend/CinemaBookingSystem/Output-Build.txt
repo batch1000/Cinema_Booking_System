@@ -1,0 +1,6 @@
+﻿Build started...
+1>------ Build started: Project: CinemaBookingSystem, Configuration: Debug Any CPU ------
+1>C:\Users\Win\Downloads\MovieTicketBookingSystem\Backend\CinemaBookingSystem\CinemaBookingSystem\Services\RedisSubscriberService.cs(32,38,32,62): warning CS0618: 'RedisChannel.implicit operator RedisChannel(string)' is obsolete: 'It is preferable to explicitly specify a PatternMode, or use the Literal/Pattern methods'
+1>CinemaBookingSystem -> C:\Users\Win\Downloads\MovieTicketBookingSystem\Backend\CinemaBookingSystem\CinemaBookingSystem\bin\Debug\netcoreapp3.1\CinemaBookingSystem.dll
+1>Done building project "CinemaBookingSystem.csproj".
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

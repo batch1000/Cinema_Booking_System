@@ -1,0 +1,60 @@
+/* --- Pagination --- */
+.dashboard-content__management-movie-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2.8rem;
+  border-top: 1.5px solid #eceef5;
+  background: #fff;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.dashboard-content__management-movie-pagination-info {
+  font-size: 1.5rem;
+  color: #8a90a2;
+}
+
+.dashboard-content__management-movie-pagination-info strong {
+  color: #1a1d2e;
+}
+
+.dashboard-content__management-movie-pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dashboard-content__management-movie-page-btn {
+  width: 3.8rem;
+  height: 3.8rem;
+  border: 1.5px solid #e2e5f0;
+  border-radius: 0.8rem;
+  background: #fff;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: #5a6078;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.dashboard-content__management-movie-page-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: #e8f4fd;
+}
+
+.dashboard-content__management-movie-page-btn--active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+.dashboard-content__management-movie-page-btn--active:hover {
+  background: #2180c0;
+  color: #fff;
+}

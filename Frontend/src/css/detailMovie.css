@@ -1,0 +1,874 @@
+/* ══════════════════════════════════════════
+   detailMovie.css
+   Dark cinematic theme — matches home.css
+══════════════════════════════════════════ */
+
+/* ── HERO ─────────────────────────────── */
+.dm-hero {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  background-size: cover;
+  background-position: center 20%;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.dm-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      to right,
+      rgba(10, 12, 22, 0.97) 0%,
+      rgba(10, 12, 22, 0.55) 55%,
+      rgba(10, 12, 22, 0.1) 100%
+    ),
+    linear-gradient(to top, rgba(10, 12, 22, 1) 0%, rgba(10, 12, 22, 0.2) 50%);
+}
+
+.dm-hero__content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 3rem;
+  padding-left: 3rem !important;
+  width: 100%;
+}
+
+/* Poster */
+.dm-poster {
+  position: relative;
+  transform: translateY(40px);
+}
+
+.dm-poster__img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  display: block;
+  position: relative;
+  top: -22px;
+}
+
+/* Hero info */
+.dm-hero__info {
+  padding-bottom: 0.5rem;
+  position: relative;
+  top: -22px;
+}
+
+.dm-hero__genres {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.dm-genre-tag {
+  font-size: 1.3rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dm-genre-tag:hover {
+  background: rgba(245, 166, 35, 0.2);
+  border-color: #f5a623;
+  color: #f5a623;
+}
+
+.dm-hero__title {
+  font-size: 6rem;
+  font-weight: 500;
+  font-family: "Great Vibes", "Segoe Script", cursive;
+  color: #fff;
+  margin: 0.3rem 0 0.2rem;
+  line-height: 1.1;
+}
+
+.dm-hero__title:hover {
+  color: #d9b96a;
+  cursor: default;
+}
+
+.dm-hero__original-title {
+  font-size: 1.5rem;
+  color: #d9b96a;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.dm-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.dm-meta-item {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+.dm-meta-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #555;
+  display: inline-block;
+}
+
+.dm-meta-age {
+  font-size: 1.3rem;
+  padding: 0.15rem 0.55rem;
+  border-radius: 4px;
+  background: rgba(255, 80, 80, 0.18);
+  border: 1px solid rgba(255, 80, 80, 0.45);
+  color: #ff7070;
+  font-weight: 700;
+}
+
+/* ── BODY ─────────────────────────────── */
+.dm-body {
+  background: #0d0f18;
+  padding: 0.5rem 3rem 4rem;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* ── BOOKING BAR ──────────────────────── */
+.dm-booking-bar {
+  padding: 2rem 0 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dm-score-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.dm-score-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.dm-score-label {
+  font-size: 1.2rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.dm-score-value {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+
+.dm-score-value--sm {
+  font-size: 2.2rem;
+}
+
+.dm-score-stars {
+  display: flex;
+  gap: 2px;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.dm-score-stars--gold {
+  color: #f5c518;
+}
+
+.dm-score-divider {
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+}
+
+/* ── BUTTONS ──────────────────────────── */
+.dm-btn {
+  font-size: 1.5rem;
+  padding: 0.65rem 1.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.dm-btn--primary {
+  background: linear-gradient(
+    39deg,
+    rgba(254, 207, 89, 1),
+    rgba(255, 185, 50, 1)
+  );
+  color: #000;
+  border: none;
+}
+
+.dm-btn--primary:hover {
+  background: linear-gradient(39deg, #ffc14d, #ffd97a);
+  transform: translateY(-1px);
+}
+
+.dm-btn--outline {
+  background: transparent;
+  color: #e0e0e0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.dm-btn--outline:hover {
+  border-color: #f5a623;
+  color: #f5a623;
+}
+
+.dm-btn--sm {
+  font-size: 1.3rem;
+  padding: 0.4rem 1.1rem;
+}
+
+/* ── SECTIONS ─────────────────────────── */
+.dm-section__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.6rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid rgba(245, 166, 35, 0.35);
+  display: inline-block;
+}
+
+.dm-section__head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 2px solid rgba(245, 166, 35, 0.35);
+  padding-bottom: 0.7rem;
+}
+
+.dm-desc {
+  font-size: 1.5rem;
+  line-height: 1.85;
+  color: #ccc;
+  font-weight: 300;
+}
+
+/* ── DIỄN VIÊN ────────────────────────── */
+.dm-actor {
+  text-align: center;
+}
+
+.dm-actor__img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.6rem;
+  transition: transform 0.25s;
+  cursor: pointer;
+}
+
+.dm-actor__img:hover {
+  transform: scale(1.04);
+}
+
+.dm-actor__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #eee;
+  margin: 0 0 0.1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dm-actor__role {
+  font-size: 1.3rem;
+  color: #888;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* ── TRAILER ──────────────────────────── */
+.dm-trailer {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.dm-trailer__frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── ĐÁNH GIÁ ─────────────────────────── */
+.dm-rating-summary {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dm-rating-big {
+  font-size: 5.5rem;
+  font-weight: 800;
+  color: #f5c518;
+  line-height: 1;
+}
+
+.dm-rating-stars {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  font-size: 1.4rem;
+  color: #f5c518;
+}
+
+.dm-rating-count {
+  font-size: 1.3rem;
+  color: #888;
+  margin: 0;
+}
+
+.dm-bar-row {
+  margin-bottom: 0.5rem;
+}
+
+.dm-bar-label {
+  font-size: 1.3rem;
+  color: #aaa;
+  white-space: nowrap;
+}
+
+.dm-bar-label .fa-star {
+  color: #f5c518;
+  font-size: 1.1rem;
+}
+
+.dm-bar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.dm-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #f5c518, #ffa200);
+  transition: width 0.6s ease;
+}
+
+.dm-bar-pct {
+  font-size: 1.3rem;
+  color: #aaa;
+}
+
+/* Review cards */
+.dm-review {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+  padding: 1.6rem;
+  transition: border-color 0.2s;
+}
+
+.dm-review:hover {
+  border-color: rgba(245, 166, 35, 0.3);
+}
+
+.dm-review__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00c6ff, #7b2ff7);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dm-review__avatar--pink {
+  background: linear-gradient(135deg, #ff7ee5, #fcb045);
+}
+
+.dm-review__avatar--green {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.dm-review__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.dm-review__name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #eee;
+}
+
+.dm-review__date {
+  font-size: 1.3rem;
+  color: #666;
+}
+
+.dm-review__stars {
+  display: flex;
+  gap: 2px;
+  font-size: 1.3rem;
+  color: #f5c518;
+}
+
+.dm-review__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 0.4rem;
+}
+
+.dm-review__text {
+  font-size: 1.4rem;
+  color: #bbb;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* ── SIDEBAR ──────────────────────────── */
+.dm-sidebar-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 1.8rem;
+}
+
+.dm-sidebar-card__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dm-sidebar-card__title i {
+  color: #f5a623;
+}
+
+/* Lịch chiếu */
+.dm-sidebar-card__date {
+  font-size: 1.3rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.dm-showtime-cinema {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dm-showtime-cinema:last-child {
+  border-bottom: none;
+}
+
+.dm-showtime-cinema__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #eee;
+  margin-bottom: 0.7rem;
+}
+
+.dm-showtime-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ccc;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border-radius: 6px;
+  cursor: auto;
+  transition: all 0.2s;
+}
+
+.dm-showtime-btn:hover {
+  background: rgba(245, 166, 35, 0.15);
+  border-color: #f5a623;
+  color: #f5a623;
+}
+
+.dm-showtime-btn--active {
+  background: rgba(245, 166, 35, 0.18);
+  border-color: #f5a623;
+  color: #f5a623;
+}
+
+/* Thông tin chi tiết */
+.dm-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.dm-info-row {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dm-info-row:last-child {
+  border-bottom: none;
+}
+
+.dm-info-label {
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.dm-info-value {
+  font-size: 1.4rem;
+  color: #eee;
+  font-weight: 400;
+}
+
+.dm-status-badge {
+  font-size: 1.3rem;
+  padding: 0.15rem 0.7rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.dm-status-active {
+  background: rgba(78, 222, 128, 0.12);
+  border: 1px solid rgba(78, 222, 128, 0.35);
+  color: #4ede80;
+}
+
+.dm-status-ended {
+  background: rgba(255, 99, 99, 0.12);
+  border: 1px solid rgba(255, 99, 99, 0.35);
+  color: #ff6363;
+}
+
+.dm-status-coming {
+  background: rgba(255, 193, 7, 0.12);
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  color: #ffc107;
+}
+
+/* Định dạng */
+.dm-format-badge {
+  font-size: 1.3rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ccc;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.dm-format-badge--imax {
+  background: rgba(0, 198, 255, 0.1);
+  border-color: rgba(0, 198, 255, 0.35);
+  color: #00c6ff;
+}
+
+.dm-hero__rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.dm-hero__rating span {
+  color: #fff;
+}
+
+.dm-actor-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  transition: border-color 0.2s;
+}
+
+.dm-actor-item:hover {
+  border: 1px solid rgba(245, 166, 35, 0.65);
+  cursor: pointer;
+}
+
+.dm-actor-item:hover .dm-actor-item__name {
+  color: rgba(245, 166, 35, 0.65);
+}
+
+.dm-actor-item__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.dm-actor-item__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.dm-actor-item__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #eee;
+  margin: 0;
+}
+
+.dm-actor-item__role {
+  font-size: 1.3rem;
+  color: #888;
+  margin: 0;
+  font-weight: 300;
+}
+
+
+.dm-date-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.dm-date-tab {
+  font-size: 1.3rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ccc;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dm-date-tab:hover {
+  border-color: #f5a623;
+  color: #f5a623;
+}
+
+.dm-date-tab--active {
+  background: rgba(245, 166, 35, 0.18);
+  border-color: #f5a623;
+  color: #f5a623;
+  font-weight: 600;
+}
+
+.dm-showtime-empty {
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.st-badge--age--all {
+  border: 1px solid rgba(46, 204, 113, 0.9);
+  color: #2ecc71;
+}
+
+.st-badge--age--16 {
+  border: 1px solid rgba(241, 196, 15, 0.95);
+  color: #f1c40f;
+}
+
+.st-badge--age--18 {
+  border: 1px solid rgba(255, 59, 48, 0.95);
+  color: #ff3b30;
+
+  text-shadow: 0 0 6px rgba(255, 59, 48, 0.7);
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE ADDITIONS
+══════════════════════════════════════════ */
+
+/* ── MOBILE POSTER trong hero ── */
+.dm-poster__img--mobile {
+  width: 90px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+  display: block;
+}
+
+/* ── DESC clamp ── */
+.dm-desc--clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dm-toggle-desc {
+  background: transparent;
+  border: none;
+  color: #f5a623;
+  font-size: 1.35rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  margin-top: 0.4rem;
+  transition: opacity 0.2s;
+}
+
+.dm-toggle-desc:hover {
+  opacity: 0.75;
+}
+
+/* ── BOOK BUTTON full width trên mobile ── */
+.dm-btn--book-full {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .dm-btn--book-full {
+    width: auto;
+  }
+}
+
+/* ── HERO mobile ── */
+@media (max-width: 767px) {
+  .dm-hero {
+    height: auto;
+    min-height: 55vw;
+    align-items: flex-end;
+  }
+
+  .dm-hero__content {
+    padding-bottom: 1.8rem;
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem;
+  }
+
+  .dm-hero__title {
+    font-size: 3rem;
+    line-height: 1.15;
+  }
+
+  .dm-hero__original-title {
+    font-size: 1.3rem;
+  }
+
+  .dm-hero__meta {
+    gap: 0.6rem;
+    font-size: 1.25rem;
+  }
+
+  .dm-meta-item {
+    font-size: 1.25rem;
+  }
+
+  .dm-genre-tag {
+    font-size: 1.2rem;
+    padding: 0.25rem 0.7rem;
+  }
+
+  .dm-hero__info {
+    top: 0;
+  }
+
+  /* BODY */
+  .dm-body {
+    padding: 0.5rem 1rem 3rem;
+  }
+
+  /* BOOKING BAR */
+  .dm-booking-bar {
+    padding: 1.2rem 0 1rem;
+  }
+
+  /* SECTION TITLE */
+  .dm-section__title {
+    font-size: 1.7rem;
+  }
+
+  /* ACTOR */
+  .dm-actor-item {
+    padding: 0.55rem 0.7rem;
+  }
+
+  .dm-actor-item__name {
+    font-size: 1.25rem;
+  }
+
+  /* DATE TABS scroll ngang */
+  .dm-date-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.3rem;
+  }
+
+  .dm-date-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .dm-date-tab {
+    flex-shrink: 0;
+    font-size: 1.2rem;
+  }
+
+  /* SIDEBAR CARD */
+  .dm-sidebar-card {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .dm-hero__title {
+    font-size: 2.4rem;
+  }
+
+  .dm-poster__img--mobile {
+    width: 72px;
+  }
+
+  .dm-hero__meta {
+    gap: 0.45rem;
+  }
+
+  .dm-meta-dot {
+    display: none;
+  }
+
+  .dm-hero__meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+  }
+}

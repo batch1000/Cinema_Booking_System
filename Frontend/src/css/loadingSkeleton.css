@@ -1,0 +1,74 @@
+/* ===== Movie List Skeleton (horizontal) ===== */
+
+@keyframes sk-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.sk {
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    #e4e2da 25%,
+    #f2efeb 50%,
+    #e4e2da 75%
+  );
+  background-size: 400% 100%;
+  animation: sk-shimmer 1.8s ease-in-out infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  .sk {
+    background: linear-gradient(
+      90deg,
+      #2a2928 25%,
+      #373634 50%,
+      #2a2928 75%
+    );
+    background-size: 400% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sk { animation: none; opacity: 0.55; }
+}
+
+/* Wrapper scroll ngang */
+.movie-skeleton-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 4px 2px 8px;
+  scrollbar-width: none;
+}
+.movie-skeleton-list::-webkit-scrollbar { display: none; }
+
+/* Mỗi card */
+.movie-skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 180px;
+}
+
+.movie-skeleton-poster {
+  width: 120px;
+  height: 178px;
+  border-radius: 8px;
+}
+
+.movie-skeleton-title { height: 13px; width: 85%; border-radius: 4px; }
+.movie-skeleton-year  { height: 10px; width: 50%; border-radius: 4px; }
+
+/* Stagger */
+.movie-skeleton-card:nth-child(1) .sk { animation-delay: 0.00s; }
+.movie-skeleton-card:nth-child(2) .sk { animation-delay: 0.08s; }
+.movie-skeleton-card:nth-child(3) .sk { animation-delay: 0.16s; }
+.movie-skeleton-card:nth-child(4) .sk { animation-delay: 0.24s; }
+.movie-skeleton-card:nth-child(5) .sk { animation-delay: 0.32s; }
+.movie-skeleton-card:nth-child(6) .sk { animation-delay: 0.40s; }
+.movie-skeleton-card:nth-child(7) .sk { animation-delay: 0.48s; }
+.movie-skeleton-card:nth-child(8) .sk { animation-delay: 0.56s; }

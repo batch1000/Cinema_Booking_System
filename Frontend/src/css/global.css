@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --font-main: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+

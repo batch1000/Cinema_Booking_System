@@ -1,0 +1,631 @@
+.pm-wrapper {
+  background: #0d0f18;
+  color: #e0e0e0;
+  padding: 3rem 3rem 5rem;
+  min-height: 100vh;
+}
+
+/* ── STEP INDICATOR ── */
+.pm-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.pm-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pm-step__circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: #666;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pm-step--active .pm-step__circle {
+  border-color: #f5a623;
+  background: rgba(245, 166, 35, 0.15);
+  color: #f5a623;
+  box-shadow: 0 0 14px rgba(245, 166, 35, 0.4);
+}
+
+.pm-step--done .pm-step__circle {
+  border-color: #4ede80;
+  background: rgba(78, 222, 128, 0.12);
+  color: #4ede80;
+}
+
+.pm-step__label {
+  font-size: 1.3rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.pm-step--active .pm-step__label {
+  color: #f5a623;
+  font-weight: 600;
+}
+
+.pm-step--done .pm-step__label {
+  color: #4ede80;
+}
+
+.pm-step__line {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 1.2rem;
+  margin-bottom: 2.4rem;
+  min-width: 80px;
+}
+
+.pm-step__line--done {
+  background: rgba(78, 222, 128, 0.4);
+}
+
+/* ── SECURITY BAR ── */
+.pm-security-bar {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1.6rem 2rem;
+  background: rgba(78, 222, 128, 0.04);
+  border: 1px solid rgba(78, 222, 128, 0.12);
+  border-radius: 12px;
+}
+
+.pm-security-bar__item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.3rem;
+  color: #4ede80;
+}
+
+.pm-security-bar__item i {
+  font-size: 1.5rem;
+}
+
+/* ── COUNTDOWN ── */
+.pm-countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem 1.4rem;
+  border-radius: 10px;
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.2);
+}
+
+.pm-countdown__icon {
+  color: #f87171;
+  font-size: 1.5rem;
+  animation: bk-pulse 1s ease-in-out infinite;
+}
+
+.pm-countdown__text {
+  font-size: 1.35rem;
+  color: #aaa;
+}
+
+.pm-countdown__timer {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #f87171;
+  letter-spacing: 0.05em;
+}
+
+/* ── STRIPE HEADER BADGE ── */
+.pm-stripe-header-badge {
+  margin-left: auto;
+  font-size: 2.8rem;
+  color: #635bff;
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+}
+
+/* ── STRIPE PANEL ── */
+.pm-stripe-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.4rem 0;
+}
+
+/* ── CARD PREVIEW ── */
+.pm-card-preview {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 230px;
+  border-radius: 20px;
+  padding: 2rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1d2e 0%, #2a2d42 50%, #1e2035 100%);
+  border: 1px solid rgba(99, 91, 255, 0.25);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 0 80px rgba(99, 91, 255, 0.08);
+  transition: box-shadow 0.3s ease;
+  align-self: center;
+}
+
+.pm-card-preview--visa {
+  background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1565c0 100%);
+  border-color: rgba(100, 181, 246, 0.3);
+  box-shadow: 0 20px 60px rgba(21, 101, 192, 0.4), 0 0 80px rgba(100, 181, 246, 0.1);
+}
+
+.pm-card-preview--mastercard {
+  background: linear-gradient(135deg, #1b0000 0%, #3e0000 50%, #5c0000 100%);
+  border-color: rgba(255, 80, 80, 0.3);
+  box-shadow: 0 20px 60px rgba(183, 28, 28, 0.4), 0 0 80px rgba(255, 80, 80, 0.08);
+}
+
+.pm-card-preview--amex {
+  background: linear-gradient(135deg, #004d40 0%, #00695c 50%, #00796b 100%);
+  border-color: rgba(77, 182, 172, 0.3);
+}
+
+.pm-card-preview__shine {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.04) 50%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.pm-card-preview__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Chip */
+.pm-card-chip {
+  width: 44px;
+  height: 34px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #d4a84b, #f0d080, #c8902a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pm-card-chip__inner {
+  width: 28px;
+  height: 22px;
+  border-radius: 3px;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #c8a030, #e8c860);
+  position: relative;
+}
+
+.pm-card-chip__inner::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%);
+}
+
+.pm-card-brand-icon {
+  font-size: 2.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.3s;
+}
+
+.pm-card-preview--visa .pm-card-brand-icon { color: #fff; }
+.pm-card-preview--mastercard .pm-card-brand-icon { color: #ff6b6b; }
+
+/* Card number */
+.pm-card-preview__number {
+  display: flex;
+  gap: 1.6rem;
+  font-size: 1.8rem;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.pm-card-preview__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.pm-card-preview__meta-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.3rem;
+}
+
+.pm-card-preview__meta-value {
+  font-size: 1.35rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-family: "Courier New", monospace;
+}
+
+/* ── SANDBOX BADGE ── */
+.pm-stripe-sandbox {
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 1.4rem;
+  border-radius: 8px;
+  background: rgba(99, 91, 255, 0.08);
+  border: 1px solid rgba(99, 91, 255, 0.25);
+  font-size: 1.3rem;
+  color: #a5a0ff;
+  gap: 0.2rem;
+}
+
+.pm-stripe-sandbox i {
+  color: #635bff;
+  font-size: 1.4rem;
+}
+
+.pm-stripe-sandbox code {
+  background: rgba(99, 91, 255, 0.15);
+  border: 1px solid rgba(99, 91, 255, 0.2);
+  color: #c4c1ff;
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  margin-left: 0.3rem;
+}
+
+/* ── STRIPE FORM ── */
+.pm-stripe-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+
+.pm-stripe-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.pm-stripe-field--full {
+  grid-column: 1 / -1;
+}
+
+.pm-stripe-label {
+  font-size: 1.3rem;
+  color: #888;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.pm-stripe-label i {
+  font-size: 1.2rem;
+  color: #635bff;
+  opacity: 0.8;
+}
+
+.pm-stripe-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.pm-stripe-input-wrap--focus {
+  border-color: #635bff;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.15);
+  background: rgba(99, 91, 255, 0.04);
+}
+
+.pm-stripe-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 1.1rem 1.4rem;
+  font-size: 1.45rem;
+  color: #eee;
+  letter-spacing: 0.04em;
+}
+
+.pm-stripe-input::placeholder {
+  color: #3a3a4a;
+}
+
+.pm-stripe-input-brands {
+  display: flex;
+  gap: 0.5rem;
+  padding-right: 1.2rem;
+  font-size: 2rem;
+  color: #333;
+  flex-shrink: 0;
+}
+
+.pm-stripe-input-brands .active {
+  color: #aaa;
+}
+
+.pm-stripe-cvv-hint {
+  padding-right: 1.2rem;
+  color: #444;
+  font-size: 1.4rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.pm-stripe-cvv-hint:hover {
+  color: #635bff;
+}
+
+/* ── STRIPE POWERED ── */
+.pm-stripe-powered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.3rem;
+  color: #555;
+}
+
+.pm-stripe-powered .fab.fa-stripe {
+  font-size: 2.4rem;
+  color: #635bff;
+  opacity: 0.7;
+}
+
+
+
+/* ── STRIPE PANEL ── */
+.pm-stripe-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.4rem 0;
+}
+
+.pm-stripe-loading {
+  padding: 2rem;
+  text-align: center;
+  color: #888;
+  font-size: 1.4rem;
+}
+
+.pm-stripe-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── SANDBOX BADGE ── */
+.pm-stripe-sandbox {
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 1.4rem;
+  border-radius: 8px;
+  background: rgba(99, 91, 255, 0.08);
+  border: 1px solid rgba(99, 91, 255, 0.25);
+  font-size: 1.3rem;
+  color: #a5a0ff;
+  gap: 0.4rem;
+}
+
+.pm-stripe-sandbox i {
+  color: #635bff;
+  font-size: 1.4rem;
+}
+
+.pm-stripe-sandbox code {
+  background: rgba(99, 91, 255, 0.15);
+  border: 1px solid rgba(99, 91, 255, 0.2);
+  color: #c4c1ff;
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  margin-left: 0.3rem;
+}
+
+/* ── ERROR ── */
+.pm-stripe-error {
+  padding: 0.9rem 1.4rem;
+  border-radius: 8px;
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  color: #f87171;
+  font-size: 1.3rem;
+}
+
+/* ── POWERED ── */
+.pm-stripe-powered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.3rem;
+  color: #555;
+}
+
+.pm-stripe-powered .fab.fa-stripe {
+  font-size: 2.4rem;
+  color: #635bff;
+  opacity: 0.7;
+}
+
+/* ── CONTAINER ── */
+.pm-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ── MAIN LAYOUT (thay thế row g-4 của Bootstrap) ── */
+.pm-layout {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.pm-layout__left {
+  min-width: 0;
+}
+
+.pm-layout__right {
+  min-width: 0;
+}
+
+/* ── RESPONSIVE: Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .pm-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pm-layout__right {
+    order: -1; /* Summary card lên trên trên mobile/tablet */
+  }
+
+  .pm-wrapper {
+    padding: 2rem 1.5rem 4rem;
+  }
+}
+
+/* ── RESPONSIVE: Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+  .pm-wrapper {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  /* Movie bar */
+  .bk-movie-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+
+  .bk-movie-bar__poster img {
+    width: 80px;
+    height: auto;
+  }
+
+  .bk-movie-bar__title {
+    font-size: 1.6rem;
+  }
+
+  /* Steps */
+  .pm-steps {
+    gap: 0;
+  }
+
+  .pm-step__label {
+    font-size: 1.1rem;
+  }
+
+  .pm-step__circle {
+    width: 34px;
+    height: 34px;
+    font-size: 1.3rem;
+  }
+
+  .pm-step__line {
+    min-width: 40px;
+    margin: 0 0.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  /* Security bar */
+  .pm-security-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem 1.4rem;
+  }
+
+  /* Summary card */
+  .bk-summary-card {
+    padding: 1.4rem;
+  }
+
+  /* Ticket table */
+  .bk-ticket-table {
+    font-size: 1.2rem;
+  }
+
+  /* Countdown */
+  .pm-countdown {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+/* ── RESPONSIVE: Small mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .pm-wrapper {
+    padding: 1rem 0.75rem 2.5rem;
+  }
+
+  .pm-steps {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+
+  .pm-stripe-sandbox {
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+  }
+
+  .pm-security-bar__item span {
+    font-size: 1.2rem;
+  }
+
+  .bk-section__header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .pm-stripe-header-badge {
+    margin-left: 0;
+  }
+}

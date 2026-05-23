@@ -1,0 +1,101 @@
+.signup-page {
+  overflow: hidden;
+  font-family: "Nunito", sans-serif;
+}
+
+.signup-card {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.signup-form {
+  display: flex;
+  align-items: center;
+}
+
+.signup-form .signup-form-wrapper {
+  width: 100%;
+}
+
+.signup-form h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.signup-form input {
+  font-size: 1.5rem;
+}
+
+.signup-form button {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.signup-card .image-holder {
+  height: 85vh;
+}
+
+.signup-card .image-fluid {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.signup-form .double-input {
+  display: flex;
+  gap: 10px;
+}
+
+.signup-form .form-control {
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding-right: 40px; /* Để chỗ cho icon mắt */
+}
+
+.signup-form .form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.signup-form .form-control::placeholder {
+  color: #6c757d;
+}
+
+.signup-form .signup-input-error:focus {
+  border-color: red;
+  box-shadow: 0 0 0 0.25rem rgba(255, 0, 0, 0.25);
+}
+
+.signup-form .btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  border-radius: 8px;
+  padding: 8px;
+  font-weight: 600;
+}
+
+.signup-form .btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+
+.signup-page {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.signup-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../image/background_signup.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);      /* độ mờ */
+    transform: scale(1.1);  /* tránh viền trắng khi blur */
+    z-index: -1;
+}

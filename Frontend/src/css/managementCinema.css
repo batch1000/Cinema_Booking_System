@@ -1,0 +1,1157 @@
+/* ===== MANAGEMENT CINEMA ===== */
+.dashboard-content__management-cinema {
+  padding: 3rem 3.5rem;
+  min-height: 100vh;
+  background: #f7f8fc;
+}
+
+/* --- Header --- */
+.dashboard-content__management-cinema-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.dashboard-content__management-cinema-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #1a1d2e;
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-content__management-cinema-title::before {
+  content: "🎪";
+  font-size: 2.4rem;
+}
+
+.dashboard-content__management-cinema-subtitle {
+  font-size: 1.5rem;
+  color: #8a90a2;
+  font-weight: 500;
+  margin-top: 0.3rem;
+}
+
+/* --- Stats --- */
+.dashboard-content__management-cinema-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-content__management-cinema-stat-card {
+  background: #fff;
+  border-radius: 1.4rem;
+  padding: 2rem 2.6rem;
+  flex: 1;
+  min-width: 16rem;
+  border: 1.5px solid #eceef5;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.dashboard-content__management-cinema-stat-card:hover {
+  box-shadow: 0 8px 24px rgba(52, 152, 219, 0.1);
+  transform: translateY(-2px);
+}
+
+.dashboard-content__management-cinema-stat-icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.dashboard-content__management-cinema-stat-icon--blue {
+  background: #e8f4fd;
+  color: #2b6cb0;
+}
+.dashboard-content__management-cinema-stat-icon--green {
+  background: #e8faf0;
+  color: #276749;
+}
+.dashboard-content__management-cinema-stat-icon--orange {
+  background: #fff4e8;
+  color: #9c4221;
+}
+.dashboard-content__management-cinema-stat-icon--purple {
+  background: #f3e8fd;
+  color: #6b46c1;
+}
+
+.dashboard-content__management-cinema-stat-label {
+  font-size: 1.4rem;
+  color: #8a90a2;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.dashboard-content__management-cinema-stat-value {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1d2e;
+  line-height: 1.1;
+}
+
+/* --- Toolbar --- */
+.dashboard-content__management-cinema-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-content__management-cinema-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 22rem;
+}
+
+.dashboard-content__management-cinema-search-icon {
+  position: absolute;
+  left: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aab0c2;
+  font-size: 1.7rem;
+  pointer-events: none;
+}
+
+.dashboard-content__management-cinema-search {
+  width: 100%;
+  padding: 1.2rem 1.6rem 1.2rem 4.6rem;
+  border: 1.5px solid #e2e5f0;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  background: #fff;
+  color: #1a1d2e;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-content__management-cinema-search:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
+}
+
+/* --- Buttons --- */
+.dashboard-content__management-cinema-btn {
+  padding: 1.2rem 2.4rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.dashboard-content__management-cinema-btn--primary {
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(52, 152, 219, 0.35);
+}
+
+.dashboard-content__management-cinema-btn--primary:hover {
+  background: #2180c0;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.dashboard-content__management-cinema-btn--secondary {
+  background: #f3f5fb;
+  color: #5a6078;
+  border: 1.5px solid #e2e5f0;
+}
+
+.dashboard-content__management-cinema-btn--secondary:hover {
+  background: #e8eaf2;
+}
+
+.dashboard-content__management-cinema-btn--danger {
+  background: #e74c3c;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(231, 76, 60, 0.3);
+}
+
+.dashboard-content__management-cinema-btn--danger:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+.dashboard-content__management-cinema-btn--outline {
+  background: #fff;
+  color: var(--primary-color);
+  border: 1.5px solid var(--primary-color);
+}
+
+.dashboard-content__management-cinema-btn--outline:hover {
+  background: #e8f4fd;
+}
+
+.dashboard-content__management-cinema-btn--sm {
+  padding: 0.8rem 1.4rem;
+  font-size: 1.4rem;
+  border-radius: 0.8rem;
+}
+
+.dashboard-content__management-cinema-btn--icon-only {
+  padding: 0.8rem 1rem;
+  font-size: 1.6rem;
+}
+
+/* --- Search & Filter buttons --- */
+.dashboard-content__management-cinema-search-button {
+  padding: 8px 16px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dashboard-content__management-cinema-search-button:hover {
+  background-color: #4338ca;
+}
+.dashboard-content__management-cinema-search-button:active {
+  transform: scale(0.97);
+}
+.dashboard-content__management-cinema-search-button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.dashboard-content__management-cinema-clear-filter-button {
+  padding: 8px 16px;
+  background-color: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dashboard-content__management-cinema-clear-filter-button:hover {
+  background-color: #4b5563;
+}
+.dashboard-content__management-cinema-clear-filter-button:active {
+  transform: scale(0.97);
+}
+
+/* --- Cinema List --- */
+.dashboard-content__management-cinema-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/* --- Cinema Card --- */
+.dashboard-content__management-cinema-card {
+  background: #fff;
+  border-radius: 1.6rem;
+  border: 1.5px solid #eceef5;
+  box-shadow: 0 2px 12px rgba(26, 29, 46, 0.04);
+  overflow: hidden;
+}
+
+.dashboard-content__management-cinema-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  padding: 2rem 2.8rem;
+  background: #fafbfe;
+  border-bottom: 1.5px solid #f0f2f8;
+  flex-wrap: wrap;
+}
+
+.dashboard-content__management-cinema-card-icon {
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 1.2rem;
+  background: #e8f4fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.dashboard-content__management-cinema-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.dashboard-content__management-cinema-card-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #1a1d2e;
+  line-height: 1.3;
+}
+
+.dashboard-content__management-cinema-card-address {
+  font-size: 1.4rem;
+  color: #8a90a2;
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dashboard-content__management-cinema-card-address i {
+  color: red;
+}
+
+.dashboard-content__management-cinema-card-meta-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.dashboard-content__management-cinema-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+/* --- Badges --- */
+.dashboard-content__management-cinema-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.dashboard-content__management-cinema-badge--blue {
+  background: #e8f4fd;
+  color: #2b6cb0;
+}
+.dashboard-content__management-cinema-badge--orange {
+  background: #fff4e8;
+  color: #9c4221;
+}
+.dashboard-content__management-cinema-badge--green {
+  background: #e8faf0;
+  color: #276749;
+}
+
+/* --- Room Section --- */
+.dashboard-content__management-cinema-room-section {
+  padding: 2rem 2.8rem 2.4rem;
+}
+
+.dashboard-content__management-cinema-room-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dashboard-content__management-cinema-room-section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #3d4460;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* --- Room Table --- */
+.dashboard-content__management-cinema-table-wrap {
+  border-radius: 1.2rem;
+  border: 1.5px solid #eceef5;
+  overflow: hidden;
+}
+
+.dashboard-content__management-cinema-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-content__management-cinema-table thead {
+  background: #f3f5fb;
+}
+
+.dashboard-content__management-cinema-table th {
+  padding: 1.4rem 1.8rem;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+  border-bottom: 1.5px solid #eceef5;
+}
+
+.dashboard-content__management-cinema-table th:last-child,
+.dashboard-content__management-cinema-table td:last-child {
+  text-align: center;
+}
+
+.dashboard-content__management-cinema-table td {
+  padding: 1.5rem 1.8rem;
+  font-size: 1.5rem;
+  color: #2d3748;
+  border-bottom: 1px solid #f0f2f8;
+  vertical-align: middle;
+}
+
+.dashboard-content__management-cinema-table tbody tr {
+  transition: background 0.15s;
+}
+
+.dashboard-content__management-cinema-table tbody tr:hover {
+  background: #f8f9ff;
+}
+
+.dashboard-content__management-cinema-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Room Name --- */
+.dashboard-content__management-cinema-room-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 700;
+  color: #1a1d2e;
+  font-size: 1.5rem;
+}
+
+/* --- Total Seat --- */
+.dashboard-content__management-cinema-total-seat {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3d4460;
+}
+
+/* --- Seat Summary Tags --- */
+.dashboard-content__management-cinema-seat-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.dashboard-content__management-cinema-seat-type-tag {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.dashboard-content__management-cinema-seat-type-tag--standard {
+  background: #f0f2f8;
+  color: #5a6078;
+}
+.dashboard-content__management-cinema-seat-type-tag--vip {
+  background: #e8f4fd;
+  color: #2b6cb0;
+}
+.dashboard-content__management-cinema-seat-type-tag--sweetbox {
+  background: #fdeaea;
+  color: #c0392b;
+}
+.dashboard-content__management-cinema-seat-type-tag--premium {
+  background: #fefcbf;
+  color: #b7791f;
+}
+
+/* --- Room Actions --- */
+.dashboard-content__management-cinema-room-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+/* --- Pagination --- */
+.dashboard-content__management-cinema-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1.6rem;
+}
+
+.dashboard-content__management-cinema-pagination-info {
+  font-size: 1.5rem;
+  color: #8a90a2;
+}
+
+.dashboard-content__management-cinema-pagination-info strong {
+  color: #1a1d2e;
+}
+
+.dashboard-content__management-cinema-pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dashboard-content__management-cinema-page-btn {
+  width: 3.8rem;
+  height: 3.8rem;
+  border: 1.5px solid #e2e5f0;
+  border-radius: 0.8rem;
+  background: #fff;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: #5a6078;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.dashboard-content__management-cinema-page-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background: #e8f4fd;
+}
+
+.dashboard-content__management-cinema-page-btn--active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+.dashboard-content__management-cinema-page-btn--active:hover {
+  background: #2180c0;
+  color: #fff;
+}
+
+.dashboard-content__management-cinema-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ================================================================
+     MODAL CHUNG
+  ================================================================ */
+.dashboard-content__management-cinema-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 18, 36, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  animation: cinemafadeIn 0.2s ease;
+}
+
+@keyframes cinemafadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dashboard-content__management-cinema-modal {
+  background: #fff;
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 58rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(15, 18, 36, 0.22);
+  animation: cinemaSlideUp 0.25s ease;
+}
+
+.dashboard-content__management-cinema-modal--wide {
+  max-width: 80rem;
+}
+
+@keyframes cinemaSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-content__management-cinema-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.4rem 1.2rem 2rem 2.8rem;
+  border-bottom: 1.5px solid #eceef5;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.dashboard-content__management-cinema-modal-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1d2e;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-content__management-cinema-modal-title-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background: #e8f4fd;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+}
+
+.dashboard-content__management-cinema-modal-close {
+  width: 3.8rem;
+  height: 3.8rem;
+  border: none;
+  border-radius: 0.9rem;
+  background: #f3f5fb;
+  color: #5a6078;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1;
+}
+
+.dashboard-content__management-cinema-modal-close:hover {
+  background: #fdeaea;
+  color: #e74c3c;
+}
+
+.dashboard-content__management-cinema-modal-body {
+  padding: 2.4rem 2.8rem;
+}
+
+.dashboard-content__management-cinema-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.2rem;
+  padding: 1.6rem 2.8rem;
+  border-top: 1.5px solid #eceef5;
+}
+
+/* ================================================================
+     FORM
+  ================================================================ */
+.dashboard-content__management-cinema-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.dashboard-content__management-cinema-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.dashboard-content__management-cinema-form-group--full {
+  grid-column: 1 / -1;
+}
+
+.dashboard-content__management-cinema-form-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3d4460;
+}
+
+.dashboard-content__management-cinema-form-label span {
+  color: #e74c3c;
+  margin-left: 0.3rem;
+}
+
+.dashboard-content__management-cinema-form-input,
+.dashboard-content__management-cinema-form-select {
+  padding: 1.2rem 1.6rem;
+  border: 1.5px solid #e2e5f0;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #1a1d2e;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.dashboard-content__management-cinema-form-input:focus,
+.dashboard-content__management-cinema-form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
+}
+
+.dashboard-content__management-cinema-form-hint {
+  font-size: 1.3rem;
+  color: #aab0c2;
+}
+
+/* Seat preview info box */
+.dashboard-content__management-cinema-seat-preview-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 1.8rem;
+  background: #f0f7ff;
+  border: 1.5px solid #bee3f8;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  color: #2b6cb0;
+  flex-wrap: wrap;
+}
+
+.dashboard-content__management-cinema-seat-preview-info i {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+/* ================================================================
+     SƠ ĐỒ GHẾ
+  ================================================================ */
+
+/* Toolbar trên sơ đồ */
+.dashboard-content__management-cinema-seat-map-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.dashboard-content__management-cinema-seat-map-legend {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-content__management-cinema-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  color: #3d4460;
+  font-weight: 600;
+}
+
+.dashboard-content__management-cinema-legend-dot {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 0.4rem;
+  flex-shrink: 0;
+}
+
+.dashboard-content__management-cinema-legend-dot--standard {
+  background: #d1d5db;
+}
+.dashboard-content__management-cinema-legend-dot--vip {
+  background: #3b82f6;
+}
+.dashboard-content__management-cinema-legend-dot--sweetbox {
+  background: #ef4444;
+}
+.dashboard-content__management-cinema-legend-dot--premium {
+  background: #f59e0b;
+}
+
+.dashboard-content__management-cinema-seat-map-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-content__management-cinema-seat-map-hint {
+  font-size: 1.4rem;
+  color: #8a90a2;
+  font-weight: 600;
+}
+
+.dashboard-content__management-cinema-seat-type-select {
+  padding: 0.8rem 1.4rem;
+  border: 1.5px solid #e2e5f0;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  font-family: inherit;
+  color: #1a1d2e;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.dashboard-content__management-cinema-seat-type-select:focus {
+  border-color: var(--primary-color);
+}
+
+/* Screen */
+.dashboard-content__management-cinema-screen-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+}
+
+.dashboard-content__management-cinema-screen {
+  width: 70%;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(180deg, #c8cedf 0%, #e8eaf2 100%);
+  border-radius: 0 0 3rem 3rem;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #5a6078;
+  letter-spacing: 0.2em;
+  box-shadow: 0 4px 16px rgba(26, 29, 46, 0.08);
+}
+
+/* Seat Map */
+.dashboard-content__management-cinema-seat-map {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-content__management-cinema-seat-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.dashboard-content__management-cinema-row-label {
+  width: 2.8rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #8a90a2;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.dashboard-content__management-cinema-seats {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+}
+
+/* Individual Seat */
+.dashboard-content__management-cinema-seat {
+  width: 4.2rem;
+  height: 4rem;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s, filter 0.12s;
+  border: none;
+  user-select: none;
+  position: relative;
+}
+
+.dashboard-content__management-cinema-seat::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  border-radius: 0 0 4px 4px;
+  opacity: 0.5;
+}
+
+.dashboard-content__management-cinema-seat:hover {
+  outline: 2px solid #fff;
+  box-shadow: 0 0 0 3px #007bff;
+  transform: scale(1.08);
+}
+
+.seat--selected {
+  outline: 2px solid #fff;
+  box-shadow: 0 0 0 3px #007bff;
+  transform: scale(1.08);
+}
+
+.dashboard-content__management-cinema-seat--standard {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.dashboard-content__management-cinema-seat--standard::after {
+  background: #9ca3af;
+}
+
+.dashboard-content__management-cinema-seat--vip {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.dashboard-content__management-cinema-seat--vip::after {
+  background: #1d4ed8;
+}
+
+.dashboard-content__management-cinema-seat--sweetbox {
+  background: #ef4444;
+  color: #fff;
+}
+
+.dashboard-content__management-cinema-seat--sweetbox::after {
+  background: #b91c1c;
+}
+
+.dashboard-content__management-cinema-seat--premium {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.dashboard-content__management-cinema-seat--premium::after {
+  background: #b45309;
+}
+
+/* Seat map summary */
+.dashboard-content__management-cinema-seat-map-summary {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 1.8rem;
+  background: #f7f8fc;
+  border-radius: 1rem;
+  border: 1.5px solid #eceef5;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  color: #3d4460;
+}
+
+.dashboard-content__management-cinema-seat-map-summary strong {
+  color: #1a1d2e;
+}
+
+/* ===== SEAT TYPE SECTION ===== */
+.dashboard-content__management-cinema-seattype-section {
+  margin-top: 3rem;
+  background: #fff;
+  border-radius: 1.6rem;
+  border: 1.5px solid #eceef5;
+  box-shadow: 0 2px 12px rgba(26, 29, 46, 0.04);
+  overflow: hidden;
+  padding: 2rem 2.8rem 2.4rem;
+}
+
+.dashboard-content__management-cinema-seattype-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.dashboard-content__management-cinema-seattype-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1d2e;
+  letter-spacing: -0.03em;
+}
+
+.dashboard-content__management-cinema-seattype-multiplier {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  background: #f0f7ff;
+  color: #2b6cb0;
+  border-radius: 999px;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+/* Color picker dots */
+.dashboard-content__management-cinema-seattype-color-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.8rem 0;
+}
+
+.dashboard-content__management-cinema-seattype-color-row input[type="color"] {
+  cursor: pointer;
+}
+
+.dashboard-content__management-cinema-seattype-color-row .color-input {
+  width: 140px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+}
+
+.dashboard-content__management-cinema-seattype-color-row .color-input::placeholder {
+  color: #9ca3af;
+}
+
+.dashboard-content__management-cinema-seattype-color-row .color-input:focus {
+  border-color: #3b82f6;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+.dashboard-content__management-cinema-seattype-color-dot {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2.5px solid transparent;
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.dashboard-content__management-cinema-seattype-color-dot:hover {
+  transform: scale(1.2);
+  border-color: #1a1d2e;
+}
+
+/* Textarea */
+.dashboard-content__management-cinema-form-textarea {
+  resize: vertical;
+  min-height: 9rem;
+}
+
+/* Delete confirm modal */
+.dashboard-content__management-cinema-modal--confirm {
+  max-width: 46rem;
+}
+
+.dashboard-content__management-cinema-delete-confirm-body {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.dashboard-content__management-cinema-delete-confirm-icon {
+  font-size: 4rem;
+  margin-bottom: 1.6rem;
+}
+
+.dashboard-content__management-cinema-delete-confirm-text {
+  font-size: 1.7rem;
+  color: #1a1d2e;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.dashboard-content__management-cinema-delete-confirm-sub {
+  font-size: 1.4rem;
+  color: #8a90a2;
+  line-height: 1.6;
+}
+
+/* ===== TAB NAVIGATION ===== */
+.dashboard-content__management-cinema-tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 2.8rem;
+  background: #fff;
+  border: 1.5px solid #eceef5;
+  border-radius: 1.2rem;
+  padding: 0.6rem;
+  width: fit-content;
+  box-shadow: 0 2px 8px rgba(26, 29, 46, 0.04);
+}
+
+.dashboard-content__management-cinema-tab-btn {
+  padding: 1rem 2.4rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #8a90a2;
+  background: transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.dashboard-content__management-cinema-tab-btn:hover {
+  color: #3d4460;
+  background: #f7f8fc;
+}
+
+.dashboard-content__management-cinema-tab-btn--active {
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(52, 152, 219, 0.3);
+}
+
+.dashboard-content__management-cinema-tab-btn--active:hover {
+  background: #2180c0;
+  color: #fff;
+}
+
+.dashboard-content__management-cinema-color-input {
+  width: 36px;
+  height: 36px;
+  border: none;
+  outline: none;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+}

@@ -1,0 +1,1001 @@
+/* ===== MANAGEMENT BOOKING ===== */
+.dashboard-content__management-booking {
+  padding: 3rem 3.5rem;
+  min-height: 100vh;
+  background: #f7f8fc;
+}
+
+/* --- Header --- */
+.dashboard-content__management-booking-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.dashboard-content__management-booking-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #1a1d2e;
+  letter-spacing: -0.04em;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-content__management-booking-subtitle {
+  font-size: 1.5rem;
+  color: #8a90a2;
+  font-weight: 500;
+  margin-top: 0.3rem;
+}
+
+/* --- Stats --- */
+.dashboard-content__management-booking-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-content__management-booking-stat-card {
+  background: #fff;
+  border-radius: 1.4rem;
+  padding: 2rem 2.6rem;
+  flex: 1;
+  min-width: 16rem;
+  border: 1.5px solid #eceef5;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.dashboard-content__management-booking-stat-card:hover {
+  box-shadow: 0 8px 24px rgba(52, 152, 219, 0.1);
+  transform: translateY(-2px);
+}
+
+.dashboard-content__management-booking-stat-icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.dashboard-content__management-booking-stat-icon--blue {
+  background: #e8f4fd;
+  color: #2b6cb0;
+}
+.dashboard-content__management-booking-stat-icon--green {
+  background: #e8faf0;
+  color: #276749;
+}
+.dashboard-content__management-booking-stat-icon--orange {
+  background: #fff4e8;
+  color: #9c4221;
+}
+.dashboard-content__management-booking-stat-icon--purple {
+  background: #f3e8fd;
+  color: #6b46c1;
+}
+
+.dashboard-content__management-booking-stat-label {
+  font-size: 1.4rem;
+  color: #8a90a2;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.dashboard-content__management-booking-stat-value {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1d2e;
+  line-height: 1.1;
+}
+
+/* --- Tabs --- */
+.dashboard-content__management-booking-tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 2.8rem;
+  background: #fff;
+  border: 1.5px solid #eceef5;
+  border-radius: 1.2rem;
+  padding: 0.6rem;
+  width: fit-content;
+  box-shadow: 0 2px 8px rgba(26, 29, 46, 0.04);
+}
+
+.dashboard-content__management-booking-tab-btn {
+  padding: 1rem 2.4rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #8a90a2;
+  background: transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.dashboard-content__management-booking-tab-btn:hover {
+  color: #3d4460;
+  background: #f7f8fc;
+}
+
+.dashboard-content__management-booking-tab-btn--active {
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(52, 152, 219, 0.3);
+}
+
+.dashboard-content__management-booking-tab-btn--active:hover {
+  background: #2180c0;
+  color: #fff;
+}
+
+/* --- Toolbar --- */
+.dashboard-content__management-booking-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-content__management-booking-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 22rem;
+}
+
+.dashboard-content__management-booking-search-icon {
+  position: absolute;
+  left: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aab0c2;
+  font-size: 1.7rem;
+  pointer-events: none;
+}
+
+.dashboard-content__management-booking-search {
+  width: 100%;
+  padding: 1.2rem 1.6rem 1.2rem 4.6rem;
+  border: 1.5px solid #e2e5f0;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  background: #fff;
+  color: #1a1d2e;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.dashboard-content__management-booking-search:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
+}
+
+.dashboard-content__management-booking-filter-select,
+.dashboard-content__management-booking-filter-date {
+  padding: 1.2rem 1.4rem;
+  border: 1.5px solid #e2e5f0;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  background: #fff;
+  color: #1a1d2e;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.dashboard-content__management-booking-filter-select {
+  width: 180px;           /* hoặc 100%, tùy layout */
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dashboard-content__management-booking-filter-select:focus,
+.dashboard-content__management-booking-filter-date:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
+}
+
+.dashboard-content__management-booking-search-button {
+  padding: 0.8rem 1.8rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dashboard-content__management-booking-search-button:hover {
+  background-color: #4338ca;
+}
+
+.dashboard-content__management-booking-clear-filter-button {
+  padding: 0.8rem 1.8rem;
+  background-color: #6b7280;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dashboard-content__management-booking-clear-filter-button:hover {
+  background-color: #4b5563;
+}
+
+/* --- Buttons --- */
+.dashboard-content__management-booking-btn {
+  padding: 1.2rem 2.4rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.dashboard-content__management-booking-btn--primary {
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(52, 152, 219, 0.35);
+}
+
+.dashboard-content__management-booking-btn--primary:hover {
+  background: #2180c0;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.dashboard-content__management-booking-btn--secondary {
+  background: #f3f5fb;
+  color: #5a6078;
+  border: 1.5px solid #e2e5f0;
+}
+
+.dashboard-content__management-booking-btn--secondary:hover {
+  background: #e8eaf2;
+}
+
+.dashboard-content__management-booking-btn--danger {
+  background: #e74c3c;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(231, 76, 60, 0.3);
+}
+
+.dashboard-content__management-booking-btn--danger:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+.dashboard-content__management-booking-btn--outline {
+  background: #fff;
+  color: var(--primary-color);
+  border: 1.5px solid var(--primary-color);
+}
+
+.dashboard-content__management-booking-btn--outline:hover {
+  background: #e8f4fd;
+}
+
+.dashboard-content__management-booking-btn--sm {
+  padding: 0.8rem 1.4rem;
+  font-size: 1.4rem;
+  border-radius: 0.8rem;
+}
+
+.dashboard-content__management-booking-btn--icon-only {
+  padding: 0.8rem 1rem;
+  font-size: 1.6rem;
+}
+
+/* --- Table --- */
+.dashboard-content__management-booking-table-wrap {
+  border-radius: 1.2rem;
+  border: 1.5px solid #eceef5;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.dashboard-content__management-booking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-content__management-booking-table thead {
+  background: #f3f5fb;
+}
+
+.dashboard-content__management-booking-table th {
+  padding: 1.4rem 1.8rem;
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+  border-bottom: 1.5px solid #eceef5;
+}
+
+.dashboard-content__management-booking-table th:last-child,
+.dashboard-content__management-booking-table td:last-child {
+  text-align: center;
+}
+
+.dashboard-content__management-booking-table td {
+  padding: 1.5rem 1.8rem;
+  font-size: 1.5rem;
+  color: #2d3748;
+  border-bottom: 1px solid #f0f2f8;
+  vertical-align: middle;
+}
+
+.dashboard-content__management-booking-table tbody tr {
+  transition: background 0.15s;
+}
+
+.dashboard-content__management-booking-table tbody tr:hover {
+  background: #f8f9ff;
+}
+
+.dashboard-content__management-booking-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Movie cell --- */
+.dashboard-content__management-booking-movie-cell {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.dashboard-content__management-booking-movie-thumb {
+  width: 4rem;
+  height: 5.6rem;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  flex-shrink: 0;
+  border: 1px solid #eceef5;
+}
+
+.dashboard-content__management-booking-movie-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1d2e;
+  line-height: 1.4;
+}
+
+/* --- Room cell --- */
+.dashboard-content__management-booking-room-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dashboard-content__management-booking-cinema-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1d2e;
+}
+
+.dashboard-content__management-booking-room-name {
+  font-size: 1.4rem;
+  color: #8a90a2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* --- Datetime --- */
+.dashboard-content__management-booking-datetime {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.dashboard-content__management-booking-date {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1d2e;
+}
+
+.dashboard-content__management-booking-time {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* --- Price --- */
+.dashboard-content__management-booking-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #276749;
+}
+
+.dashboard-content__management-booking-total-price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #276749;
+}
+
+/* --- Seat progress --- */
+.dashboard-content__management-booking-seat-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 10rem;
+}
+
+.dashboard-content__management-booking-seat-count {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #3d4460;
+}
+
+.dashboard-content__management-booking-progress-bar {
+  height: 0.7rem;
+  background: #eceef5;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.dashboard-content__management-booking-progress-fill {
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* --- Badges --- */
+.dashboard-content__management-booking-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dashboard-content__management-booking-badge--green {
+  background: #e8faf0;
+  color: #276749;
+}
+.dashboard-content__management-booking-badge--blue {
+  background: #e8f4fd;
+  color: #2b6cb0;
+}
+.dashboard-content__management-booking-badge--orange {
+  background: #fff4e8;
+  color: #9c4221;
+}
+.dashboard-content__management-booking-badge--red {
+  background: #fdeaea;
+  color: #c0392b;
+}
+.dashboard-content__management-booking-badge--gray {
+  background: #f0f2f8;
+  color: #5a6078;
+}
+
+/* --- Actions --- */
+.dashboard-content__management-booking-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+/* --- Order ID --- */
+.dashboard-content__management-booking-order-id {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  font-family: monospace;
+}
+
+/* --- Customer cell --- */
+.dashboard-content__management-booking-customer-cell {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.dashboard-content__management-booking-avatar {
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.dashboard-content__management-booking-customer-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1d2e;
+}
+
+.dashboard-content__management-booking-customer-email {
+  font-size: 1.3rem;
+  color: #8a90a2;
+  margin-top: 0.2rem;
+}
+
+/* --- Showtime cell --- */
+.dashboard-content__management-booking-showtime-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.dashboard-content__management-booking-showtime-info {
+  font-size: 1.3rem;
+  color: #8a90a2;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* --- Seat tags --- */
+.dashboard-content__management-booking-seat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.dashboard-content__management-booking-seat-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1rem;
+  background: #f0f2f8;
+  color: #3d4460;
+  border-radius: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.dashboard-content__management-booking-date-text {
+  font-size: 1.4rem;
+  color: #5a6078;
+}
+
+/* ================================================================
+       MODAL
+  ================================================================ */
+.dashboard-content__management-booking-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 18, 36, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  animation: bookingFadeIn 0.2s ease;
+}
+
+@keyframes bookingFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dashboard-content__management-booking-modal {
+  background: #fff;
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 58rem;
+  max-height: 97vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(15, 18, 36, 0.22);
+  animation: bookingSlideUp 0.25s ease;
+}
+
+.dashboard-content__management-booking-modal--wide {
+  max-width: 80rem;
+}
+
+@keyframes bookingSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-content__management-booking-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.4rem 1.2rem 2rem 2.8rem;
+  border-bottom: 1.5px solid #eceef5;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.dashboard-content__management-booking-modal-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1d2e;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-content__management-booking-modal-title-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background: #e8f4fd;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+}
+
+.dashboard-content__management-booking-modal-close {
+  width: 3.8rem;
+  height: 3.8rem;
+  border: none;
+  border-radius: 0.9rem;
+  background: #f3f5fb;
+  color: #5a6078;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1;
+}
+
+.dashboard-content__management-booking-modal-close:hover {
+  background: #fdeaea;
+  color: #e74c3c;
+}
+
+.dashboard-content__management-booking-modal-body {
+  padding: 2.4rem 2.8rem;
+}
+
+.dashboard-content__management-booking-modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.2rem;
+  padding: 1.6rem 2.8rem;
+  border-top: 1.5px solid #eceef5;
+}
+
+/* ================================================================
+       FORM
+  ================================================================ */
+.dashboard-content__management-booking-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.dashboard-content__management-booking-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.dashboard-content__management-booking-form-group--full {
+  grid-column: 1 / -1;
+}
+
+.dashboard-content__management-booking-form-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3d4460;
+}
+
+.dashboard-content__management-booking-form-label span {
+  color: #e74c3c;
+  margin-left: 0.3rem;
+}
+
+.dashboard-content__management-booking-form-input,
+.dashboard-content__management-booking-form-select {
+  padding: 1.2rem 1.6rem;
+  border: 1.5px solid #e2e5f0;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #1a1d2e;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  width: 100%;
+}
+
+.dashboard-content__management-booking-form-input:focus,
+.dashboard-content__management-booking-form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
+}
+
+.dashboard-content__management-booking-form-hint {
+  font-size: 1.3rem;
+  color: #aab0c2;
+}
+
+/* ================================================================
+       MODAL CHI TIẾT ĐƠN
+  ================================================================ */
+.dashboard-content__management-booking-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.dashboard-content__management-booking-detail-block {
+  background: #f7f8fc;
+  border: 1.5px solid #eceef5;
+  border-radius: 1.2rem;
+  padding: 1.8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dashboard-content__management-booking-detail-block-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #3d4460;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eceef5;
+  margin-bottom: 0.4rem;
+}
+
+.dashboard-content__management-booking-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-content__management-booking-detail-label {
+  font-size: 1.4rem;
+  color: #8a90a2;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.dashboard-content__management-booking-detail-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1d2e;
+}
+
+.dashboard-content__management-booking-detail-section-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #3d4460;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.dashboard-content__management-booking-detail-total {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.6rem;
+  padding: 1.4rem 1.8rem;
+  background: #f0f7ff;
+  border-radius: 1rem;
+  border: 1.5px solid #bee3f8;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #3d4460;
+  margin-top: 1.2rem;
+}
+
+.dashboard-content__management-booking-detail-total-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #276749;
+}
+
+.dashboard-content__management-booking-detail-payment {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+  padding: 1.4rem 1.8rem;
+  background: #f7f8fc;
+  border: 1.5px solid #eceef5;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
+
+.dashboard-content__management-booking-timerange {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.dashboard-content__management-booking-timerange-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dashboard-content__management-booking-timerange-arrow {
+  font-size: 1.3rem;
+  color: #aab0c2;
+}
+
+.booking-movie-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1.5px solid #e2e5f0;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(26, 29, 46, 0.12);
+  z-index: 100;
+  max-height: 28rem;
+  overflow-y: auto;
+  margin-top: 0.4rem;
+}
+
+.booking-movie-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 1.4rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.booking-movie-dropdown-item:hover {
+  background: #f0f7ff;
+}
+
+.booking-movie-dropdown-thumb {
+  width: 3.2rem;
+  height: 4.4rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  border: 1px solid #eceef5;
+}
+
+.booking-movie-dropdown-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1d2e;
+}
+
+.booking-movie-dropdown-meta {
+  font-size: 1.3rem;
+  color: #8a90a2;
+  margin-top: 0.2rem;
+}
+
+.booking-movie-dropdown-empty {
+  padding: 1.6rem;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #aab0c2;
+}
+
+.booking-movie-selected {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 1.4rem;
+  border: 1.5px solid var(--primary-color);
+  border-radius: 1rem;
+  background: #f0f7ff;
+  margin-top: 0.6rem;
+}
+
+.booking-movie-selected-thumb {
+  width: 3.2rem;
+  height: 4.4rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  border: 1px solid #eceef5;
+}
+
+.booking-movie-selected-info {
+  flex: 1;
+}
+
+.booking-movie-selected-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1d2e;
+}
+
+.booking-movie-selected-meta {
+  font-size: 1.3rem;
+  color: #8a90a2;
+  margin-top: 0.2rem;
+}
+
+.booking-movie-selected-remove {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: none;
+  border-radius: 0.7rem;
+  background: #fdeaea;
+  color: #e74c3c;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.booking-movie-selected-remove:hover {
+  background: #e74c3c;
+  color: #fff;
+}
