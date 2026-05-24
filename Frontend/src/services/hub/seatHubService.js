@@ -1,6 +1,7 @@
 import { createConnection } from "./baseHub"
 
-const connect = createConnection("http://localhost:5000/seatHub");
+// const connect = createConnection("http://localhost:5000/seatHub");
+const connect = createConnection("https://cinema-booking-system-zvte.onrender.com/seatHub");
 
 async function start() {
   return await connect.start();
