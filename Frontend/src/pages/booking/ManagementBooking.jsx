@@ -768,12 +768,12 @@ function ShowTimeTab({ overViewInfo, setOverViewInfo }) {
 
         <td>
           <div className="dashboard-content__management-booking-actions">
-            <button
+            {/* <button
               className="dashboard-content__management-booking-btn dashboard-content__management-booking-btn--outline dashboard-content__management-booking-btn--sm dashboard-content__management-booking-btn--icon-only"
               title="Xem đơn đặt vé"
             >
               <i className="fa-solid fa-eye"></i>
-            </button>
+            </button> */}
             <button
               className="dashboard-content__management-booking-btn dashboard-content__management-booking-btn--outline dashboard-content__management-booking-btn--sm dashboard-content__management-booking-btn--icon-only"
               title="Chỉnh sửa"
@@ -1131,7 +1131,7 @@ function BookingTab({ overViewInfo, setOverViewInfo }) {
             {getDate(item.createAt)}
           </span>
         </td>
-        <td>
+        {/* <td>
           <div className="dashboard-content__management-booking-actions">
             <button
               className="dashboard-content__management-booking-btn dashboard-content__management-booking-btn--outline dashboard-content__management-booking-btn--sm dashboard-content__management-booking-btn--icon-only"
@@ -1140,7 +1140,7 @@ function BookingTab({ overViewInfo, setOverViewInfo }) {
               <i className="fa-solid fa-eye"></i>
             </button>
           </div>
-        </td>
+        </td> */}
       </tr>
     ));
   };
@@ -1200,7 +1200,7 @@ function BookingTab({ overViewInfo, setOverViewInfo }) {
                 <th>Ghế</th>
                 <th>Tổng tiền</th>
                 <th>Ngày đặt</th>
-                <th>Thao tác</th>
+                {/* <th>Thao tác</th> */}
               </tr>
             </thead>
             <tbody>{renderListBooking()}</tbody>

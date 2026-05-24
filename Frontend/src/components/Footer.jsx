@@ -1,7 +1,7 @@
 import "../css/footer.css";
 import logoWeb from "../image/logo_web.png";
 
-import { Link} from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function Footer() {
   return (
@@ -38,34 +38,22 @@ function Footer() {
           <h4 className="footer__col-title">Thể Loại</h4>
           <ul className="footer__col-list">
             <li>
-              <div className="footer__col-link">
-                Hành Động
-              </div>
+              <div className="footer__col-link">Hành Động</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Tình Cảm
-              </div>
+              <div className="footer__col-link">Tình Cảm</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Kinh Dị
-              </div>
+              <div className="footer__col-link">Kinh Dị</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Hài Hước
-              </div>
+              <div className="footer__col-link">Hài Hước</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Viễn Tưởng
-              </div>
+              <div className="footer__col-link">Viễn Tưởng</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Hoạt Hình
-              </div>
+              <div className="footer__col-link">Hoạt Hình</div>
             </li>
           </ul>
         </div>
@@ -75,34 +63,22 @@ function Footer() {
           <h4 className="footer__col-title">Dịch Vụ</h4>
           <ul className="footer__col-list">
             <li>
-              <div className="footer__col-link">
-                Đặt Vé Online
-              </div>
+              <div className="footer__col-link">Đặt Vé Online</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Combo Bắp Nước
-              </div>
+              <div className="footer__col-link">Lịch Chiếu Phim</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Thẻ Thành Viên
-              </div>
+              <div className="footer__col-link">Phim Đang Chiếu</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Vé Nhóm & Doanh Nghiệp
-              </div>
+              <div className="footer__col-link">Phim Sắp Chiếu</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Phòng Chiếu VIP
-              </div>
+              <div className="footer__col-link">Rạp Chiếu Phim</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Ưu Đãi & Khuyến Mãi
-              </div>
+              <div className="footer__col-link">Tiện Ích Rạp Chiếu</div>
             </li>
           </ul>
         </div>
@@ -112,34 +88,22 @@ function Footer() {
           <h4 className="footer__col-title">Hỗ Trợ</h4>
           <ul className="footer__col-list">
             <li>
-              <div className="footer__col-link">
-                Hệ Thống Rạp
-              </div>
+              <div className="footer__col-link">Hệ Thống Rạp</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Hướng Dẫn Đặt Vé
-              </div>
+              <div className="footer__col-link">Hướng Dẫn Đặt Vé</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Chính Sách Hoàn Vé
-              </div>
+              <div className="footer__col-link">Chính Sách Hoàn Vé</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Liên Hệ
-              </div>
+              <div className="footer__col-link">Liên Hệ</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Chính Sách Bảo Mật
-              </div>
+              <div className="footer__col-link">Chính Sách Bảo Mật</div>
             </li>
             <li>
-              <div className="footer__col-link">
-                Điều Khoản Sử Dụng
-              </div>
+              <div className="footer__col-link">Điều Khoản Sử Dụng</div>
             </li>
           </ul>
         </div>

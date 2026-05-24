@@ -150,6 +150,9 @@ function ManagementMovie() {
             <button
               className="dashboard-content__management-movie-btn dashboard-content__management-movie-btn--outline dashboard-content__management-movie-btn--sm dashboard-content__management-movie-btn--icon-only"
               title="Xem chi tiết"
+              onClick={() => {
+                 window.open(`/detailMovie/${item.movieID}`, "_blank");
+              }}
             >
               <i className="fa-solid fa-eye"></i>
             </button>

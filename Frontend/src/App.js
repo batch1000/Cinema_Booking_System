@@ -15,22 +15,29 @@ import Payment from "./pages/booking/Payment";
 import MyBooking from "./pages/booking/MyBooking";
 
 import Test from "./components/Test"
+import AdminRoute from "./pages/admin/AdminRoute";
+import PublicRoute from "./pages/public/PublicRoute"
 
 function App() {
   return (
     <div className="App">
       <ScrollToTop />
       <Switch>
-        <Route path="/signup" component={Signup} />
-        <Route path="/login" component={Login} />
+        <PublicRoute path="/signup" component={Signup} />
+        <PublicRoute path="/login" component={Login} />
         <Route exact path="/" component={Home} />
         <Route path="/detailMovie/:id" component={DetailMovie} />
         <Route path="/booking/:id" component={Booking}/>
         <Route path="/myBooking" component={MyBooking}/>
         <Route path="/payment/:bookingId/:showTimeId" component={Payment}/>
         <Route path="/showTimes" component={ShowTimes} />
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/importMovieFromApi" component={ImportMovie} />
+
+         {/* Chỉ Admin mới vào được */}
+        <AdminRoute path="/dashboard" component={Dashboard} />
+        <AdminRoute
+          path="/importMovieFromApi"
+          component={ImportMovie}
+        />
 
         <Route path="/test" component={Test} />
       </Switch>
