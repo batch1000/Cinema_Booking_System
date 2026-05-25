@@ -95,7 +95,7 @@ function Header() {
     return (
       <Link to="/login" className="header__member-btn">
         <i className="fa-solid fa-user header__member-btn-icon-user"></i>
-        <span className="header__member-btn-text">Thành viên</span>
+        <span className="header__member-btn-text">Đăng nhập</span>
       </Link>
     );
   };
