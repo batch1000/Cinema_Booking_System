@@ -839,6 +839,7 @@ function Order({ id, movie }) {
   );
 
   const handleSelectSeat = (seat) => {
+    setLoading(true);
     seatHubService.sendSeatHold({
       seatID: seat.seatID,
       showTimeID: selectedShowTime.showTimeID,

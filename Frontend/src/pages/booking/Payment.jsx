@@ -178,7 +178,7 @@ function StripePanel({ clientSecret, bookingDraftID, showTimeID, userID }) {
     <div className="pm-stripe-panel">
       <div className="pm-stripe-sandbox">
         <i className="fas fa-flask me-2" />
-        Chế độ Sandbox — dùng thẻ test <code>4242 4242 4242 4242</code>
+        Chế độ Sandbox — dùng thẻ test <code>4242 4242 4242 4242</code> <code>Các thông tin còn lại nhập tùy ý</code>
       </div>
 
       <Elements stripe={stripePromise} options={options}>
