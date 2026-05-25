@@ -42,7 +42,10 @@ namespace CinemaBookingSystem
                     builder =>
                     {
                         builder
-                            .WithOrigins("http://localhost:3000")
+                            .WithOrigins(
+                                "http://localhost:3000",
+                                "https://cinema-booking-system-gules.vercel.app"
+                            )
                             .AllowAnyMethod()
                             .AllowAnyHeader()
                             .AllowCredentials();
