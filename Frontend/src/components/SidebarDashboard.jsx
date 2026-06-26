@@ -23,7 +23,7 @@ function SidebarDashboard() {
             alt=""
             className="dashboard-sidebar__logo-icon"
           />
-          <span className="dashboard-sidebar__logo-text">Nguyễn Văn An</span>
+          <span className="dashboard-sidebar__logo-text">Lê Văn Hoàng</span>
         </div>
 
         {/* MENU Section */}
